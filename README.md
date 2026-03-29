@@ -1,36 +1,100 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Jerriz Evangelista | Frontend Developer Portfolio
+
+A modern, dark-themed portfolio website built with Next.js, featuring glitch text effects, scroll-based animations, and a working contact form.
+
+## Live Demo
+
+[View Portfolio](https://portfolio-resume.vercel.app)
+
+## Tech Stack
+
+- **Framework:** Next.js 16 (App Router)
+- **Language:** TypeScript
+- **Styling:** Tailwind CSS v4
+- **Animations:** Framer Motion
+- **Icons:** Lucide React
+- **Fonts:** Geist Sans & Geist Mono
+- **Contact Form:** Web3Forms API
+- **Deployment:** Vercel
+
+## Features
+
+- **Dark Minimal Theme** with emerald accent color
+- **Glitch Text Effects** — hover-triggered and always-on glitch animations using CSS pseudo-elements
+- **TypeWriter Animation** — cycling text with glitch transitions powered by Framer Motion
+- **Scroll Reveal Animations** — sections fade/slide in as you scroll with staggered children
+- **Responsive Design** — fully optimized for mobile, tablet, and desktop
+- **Working Contact Form** — sends real emails via Web3Forms API
+- **8-bit Cyberpunk City Background** — canvas-drawn pixel-art city skyline with neon accents and blinking lights
+
+## Sections
+
+| Section | Description |
+|---------|-------------|
+| **Hero** | Animated intro with TypeWriter name/role cycling |
+| **About** | Bio, skill tags, and highlight cards |
+| **Experience** | Timeline layout with work history |
+| **Education** | Academic background card |
+| **Projects** | Featured professional projects grid |
+| **Contact** | Contact info + functional email form |
 
 ## Getting Started
 
-First, run the development server:
-
 ```bash
+# Install dependencies
+npm install
+
+# Run development server
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+
+# Build for production
+npm run build
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Open [http://localhost:3000](http://localhost:3000) to view the site.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## Environment Variables
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+Create a `.env.local` file in the root directory:
 
-## Learn More
+```env
+WEB3FORMS_KEY=your_web3forms_access_key
+```
 
-To learn more about Next.js, take a look at the following resources:
+Get your free access key at [web3forms.com](https://web3forms.com).
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+## Project Structure
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+```
+src/
+  app/
+    layout.tsx          # Root layout with fonts and metadata
+    page.tsx            # Home page assembling all sections
+    globals.css         # Theme, animations, glitch effects
+  components/
+    Navbar.tsx           # Fixed navigation with mobile menu
+    Hero.tsx             # Landing section with TypeWriter
+    About.tsx            # Bio, skills, and highlights
+    Experience.tsx       # Work history timeline
+    Education.tsx        # Academic background
+    Projects.tsx         # Project showcase grid
+    Contact.tsx          # Contact form + info
+    Footer.tsx           # Footer with social links
+    TypeWriter.tsx       # Glitch text cycling animation
+    ScrollReveal.tsx     # Scroll-triggered reveal wrapper
+    StaggerReveal.tsx    # Staggered children animation
+    CityBackground.tsx   # 8-bit cyberpunk city canvas
+  constants/
+    data.ts              # All portfolio content centralized
+```
 
-## Deploy on Vercel
+## Author
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+**Jerriz Evangelista**
+- Email: iamjerriz@gmail.com
+- LinkedIn: [Jerriz Evangelista](https://www.linkedin.com/in/jerriz-evangelista-071069277/)
+- JobStreet: [View Profile](https://ph.jobstreet.com/profiles/jerriz-evangelista-11NS2KcNmH)
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+## License
+
+This project is open source and available for personal use.
