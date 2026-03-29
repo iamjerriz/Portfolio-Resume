@@ -22,11 +22,11 @@ export default function Footer() {
               <Mail size={20} />
             </a>
             <a
-              href={PERSONAL.jobStreetUrl}
+              href={PERSONAL.linkedInUrl}
               target='_blank'
               rel='noopener noreferrer'
               className='text-muted transition-colors hover:text-accent'
-              aria-label='JobStreet Profile'
+              aria-label='LinkedIn Profile'
             >
               <Linkedin size={20} />
             </a>

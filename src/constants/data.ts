@@ -10,6 +10,7 @@ export const PERSONAL = {
   email: 'iamjerriz@gmail.com',
   location: 'Central Luzon, Philippines',
   jobStreetUrl: 'https://ph.jobstreet.com/profiles/jerriz-evangelista-11NS2KcNmH',
+  linkedInUrl: 'https://www.linkedin.com/in/jerriz-evangelista-071069277/',
   summary: 'Frontend Developer with 6 years of experience building responsive, scalable, and user-focused web applications. Passionate about crafting clean, performant interfaces.',
 };
 
