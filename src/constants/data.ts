@@ -113,24 +113,21 @@ export const PROJECTS = [
     description: 'A flagship e-commerce and digital services platform. Served as core frontend developer, building secure and maintainable modules for the payment system and user-facing features.',
     tags: ['React', 'JavaScript', 'REST API', 'Payment Integration'],
     type: 'Professional',
+    url: 'http://www.central.ph/',
   },
   {
-    title: 'Dygenfood.com',
+    title: 'Dygenfood.ph',
     description: 'A food ordering and delivery platform. Developed responsive frontend components, integrated APIs for order management, and ensured a smooth user experience across devices.',
     tags: ['React', 'Node.js', 'API Integration', 'Responsive Design'],
     type: 'Professional',
-  },
-  {
-    title: 'Balboa Digital Platforms',
-    description: 'Maintained and enhanced multiple web platforms for Balboa Digital Center Services. Implemented new features, built internal tools, and collaborated with design teams for UI/UX.',
-    tags: ['React', 'TypeScript', 'Tailwind CSS', 'UI/UX'],
-    type: 'Professional',
+    url: 'https://dygenfood.ph/',
   },
   {
     title: 'Casino Web Applications',
     description: 'Developed interactive casino web applications at SA Dreamtech, transforming wireframes into fully functional, responsive interfaces with engaging user interactions.',
     tags: ['React', 'JavaScript', 'CSS3', 'Animation'],
     type: 'Professional',
+    url: 'https://www.sagaming.com/',
   },
 ];
 
