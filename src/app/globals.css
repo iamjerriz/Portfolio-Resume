@@ -1,26 +1,243 @@
 @import "tailwindcss";
 
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+  --background: #0a0a0f;
+  --foreground: #e4e4e7;
+  --accent: #10b981;
+  --accent-hover: #34d399;
+  --card-bg: #111118;
+  --card-border: #1e1e2a;
+  --muted: #b4b4bd;
 }
 
 @theme inline {
   --color-background: var(--background);
   --color-foreground: var(--foreground);
+  --color-accent: var(--accent);
+  --color-accent-hover: var(--accent-hover);
+  --color-card-bg: var(--card-bg);
+  --color-card-border: var(--card-border);
+  --color-muted: var(--muted);
   --font-sans: var(--font-geist-sans);
   --font-mono: var(--font-geist-mono);
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+* {
+  scroll-behavior: smooth;
 }
 
 body {
   background: var(--background);
   color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: var(--font-geist-sans), system-ui, sans-serif;
+}
+
+::selection {
+  background: var(--accent);
+  color: var(--background);
+}
+
+@keyframes fade-in-up {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.animate-fade-in-up {
+  animation: fade-in-up 0.6s ease-out forwards;
+}
+
+.animate-fade-in-up-delay-1 {
+  animation: fade-in-up 0.6s ease-out 0.1s forwards;
+  opacity: 0;
+}
+
+.animate-fade-in-up-delay-2 {
+  animation: fade-in-up 0.6s ease-out 0.2s forwards;
+  opacity: 0;
+}
+
+.animate-fade-in-up-delay-3 {
+  animation: fade-in-up 0.6s ease-out 0.3s forwards;
+  opacity: 0;
+}
+
+@keyframes pulse-glow {
+  0%, 100% {
+    box-shadow: 0 0 20px rgba(16, 185, 129, 0.15);
+  }
+  50% {
+    box-shadow: 0 0 40px rgba(16, 185, 129, 0.3);
+  }
+}
+
+.glow-pulse {
+  animation: pulse-glow 3s ease-in-out infinite;
+}
+
+/* ─── Glitch Effect ──────────────────────────────────────────────────────── */
+
+.glitch-wrapper {
+  position: relative;
+  display: inline-block;
+}
+
+.glitch-text {
+  position: relative;
+}
+
+.glitch-text::before,
+.glitch-text::after {
+  content: attr(data-text);
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  opacity: 0;
+}
+
+.glitch-text::before {
+  color: #00ffff;
+  z-index: -1;
+}
+
+.glitch-text::after {
+  color: #ff00ff;
+  z-index: -1;
+}
+
+.glitch-text.glitching::before {
+  opacity: 0.8;
+  animation: glitch-shift-1 0.3s steps(2) infinite;
+}
+
+.glitch-text.glitching::after {
+  opacity: 0.8;
+  animation: glitch-shift-2 0.3s steps(2) infinite;
+}
+
+.glitch-text.glitching {
+  animation: glitch-skew 0.3s steps(2) infinite;
+}
+
+@keyframes glitch-shift-1 {
+  0% { clip-path: inset(20% 0 60% 0); transform: translateX(-3px); }
+  20% { clip-path: inset(60% 0 10% 0); transform: translateX(3px); }
+  40% { clip-path: inset(40% 0 30% 0); transform: translateX(-2px); }
+  60% { clip-path: inset(10% 0 70% 0); transform: translateX(2px); }
+  80% { clip-path: inset(70% 0 5% 0); transform: translateX(-3px); }
+  100% { clip-path: inset(30% 0 40% 0); transform: translateX(3px); }
+}
+
+@keyframes glitch-shift-2 {
+  0% { clip-path: inset(65% 0 10% 0); transform: translateX(3px); }
+  20% { clip-path: inset(15% 0 65% 0); transform: translateX(-3px); }
+  40% { clip-path: inset(50% 0 20% 0); transform: translateX(2px); }
+  60% { clip-path: inset(5% 0 75% 0); transform: translateX(-2px); }
+  80% { clip-path: inset(35% 0 40% 0); transform: translateX(3px); }
+  100% { clip-path: inset(75% 0 5% 0); transform: translateX(-3px); }
+}
+
+@keyframes glitch-skew {
+  0% { transform: skewX(0deg); }
+  20% { transform: skewX(-2deg); }
+  40% { transform: skewX(0deg); }
+  60% { transform: skewX(2deg); }
+  80% { transform: skewX(-1deg); }
+  100% { transform: skewX(0deg); }
+}
+
+/* ─── Glitch on hover ────────────────────────────────────────────────────── */
+
+.glitch-hover {
+  position: relative;
+  display: inline-block;
+}
+
+.glitch-hover::before,
+.glitch-hover::after {
+  content: attr(data-text);
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.1s;
+}
+
+.glitch-hover::before {
+  color: #0ff;
+  z-index: -1;
+}
+
+.glitch-hover::after {
+  color: #f0f;
+  z-index: -1;
+}
+
+.glitch-hover:hover::before {
+  opacity: 0.8;
+  animation: glitch-shift-1 0.3s steps(2) infinite;
+}
+
+.glitch-hover:hover::after {
+  opacity: 0.8;
+  animation: glitch-shift-2 0.3s steps(2) infinite;
+}
+
+.glitch-hover:hover {
+  animation: glitch-skew 0.3s steps(2) infinite;
+}
+
+/* ─── Subtle always-on glitch (section labels) ───────────────────────────── */
+
+.glitch-subtle {
+  position: relative;
+  display: inline-block;
+}
+
+.glitch-subtle::before,
+.glitch-subtle::after {
+  content: attr(data-text);
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  opacity: 0;
+  pointer-events: none;
+}
+
+.glitch-subtle::before {
+  color: #0ff;
+  z-index: -1;
+  animation: glitch-subtle-1 4s steps(2) infinite;
+}
+
+.glitch-subtle::after {
+  color: #f0f;
+  z-index: -1;
+  animation: glitch-subtle-2 4s steps(2) infinite;
+}
+
+@keyframes glitch-subtle-1 {
+  0%, 85%, 100% { opacity: 0; transform: none; clip-path: none; }
+  86% { opacity: 0.6; clip-path: inset(20% 0 60% 0); transform: translateX(-2px); }
+  88% { opacity: 0.6; clip-path: inset(60% 0 10% 0); transform: translateX(2px); }
+  90% { opacity: 0; transform: none; clip-path: none; }
+}
+
+@keyframes glitch-subtle-2 {
+  0%, 87%, 100% { opacity: 0; transform: none; clip-path: none; }
+  88% { opacity: 0.6; clip-path: inset(50% 0 20% 0); transform: translateX(2px); }
+  90% { opacity: 0.6; clip-path: inset(15% 0 65% 0); transform: translateX(-2px); }
+  92% { opacity: 0; transform: none; clip-path: none; }
 }

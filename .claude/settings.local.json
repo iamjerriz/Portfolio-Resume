@@ -1,0 +1,11 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(npm install lucide-react)",
+      "Bash(npm run build)",
+      "Bash(nvm list)",
+      "Bash(nvm use 22.21.1)",
+      "Bash(npm install framer-motion)"
+    ]
+  }
+}
