@@ -12,30 +12,28 @@ export default function Projects() {
       <div className='mx-auto max-w-6xl'>
         <ScrollReveal direction='up' className='mb-16 text-center'>
           <p className='mb-2 font-mono text-sm tracking-widest text-accent'>
-            <span className='glitch-subtle' data-text='PORTFOLIO'>PORTFOLIO</span>
+            <span className='glitch-subtle' data-text='PORTFOLIO'>
+              PORTFOLIO
+            </span>
           </p>
           <h2 className='glitch-hover text-3xl font-bold text-foreground sm:text-4xl' data-text='Featured Projects'>
             Featured Projects
           </h2>
         </ScrollReveal>
 
-        <StaggerReveal className='grid gap-6 sm:grid-cols-2' stagger={0.15}>
+        <StaggerReveal className='grid gap-6 sm:grid-cols-3 items-stretch' stagger={0.15}>
           {PROJECTS.map((project) => {
             const Wrapper = 'url' in project && project.url ? 'a' : 'div';
-            const linkProps = 'url' in project && project.url
-              ? { href: project.url, target: '_blank', rel: 'noopener noreferrer' }
-              : {};
+            const linkProps = 'url' in project && project.url ? { href: project.url, target: '_blank', rel: 'noopener noreferrer' } : {};
 
             return (
               <motion.div key={project.title} variants={staggerItem}>
                 <Wrapper
                   {...linkProps}
-                  className='group block cursor-pointer rounded-2xl border border-card-border bg-card-bg p-6 transition-all hover:border-accent/40 hover:shadow-lg hover:shadow-accent/5 sm:p-8'
+                  className='group flex h-full cursor-pointer rounded-2xl border border-card-border bg-card-bg p-6 transition-all hover:border-accent/40 hover:shadow-lg hover:shadow-accent/5 sm:p-8  flex-col'
                 >
                   <div className='mb-4 flex items-center justify-between'>
-                    <span className='rounded-full bg-accent/10 px-3 py-1 text-xs font-medium text-accent'>
-                      {project.type}
-                    </span>
+                    <span className='rounded-full bg-accent/10 px-3 py-1 text-xs font-medium text-accent'>{project.type}</span>
                     <div className='flex gap-3 text-muted'>
                       <ExternalLink size={18} className='transition-colors group-hover:text-accent' />
                     </div>
@@ -45,7 +43,7 @@ export default function Projects() {
                     {project.title}
                   </h3>
 
-                  <p className='mb-6 text-sm leading-relaxed text-muted'>{project.description}</p>
+                  <p className='mb-6 text-sm leading-relaxed text-muted grow'>{project.description}</p>
 
                   <div className='flex flex-wrap gap-2'>
                     {project.tags.map((tag) => (

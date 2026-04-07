@@ -123,6 +123,22 @@ export const PROJECTS = [
     url: 'https://dygenfood.ph/',
   },
   {
+    title: 'MindDump',
+    description:
+      'A modern journaling web app designed to help users declutter their minds by capturing and organizing thoughts. The platform emphasizes simplicity, usability, and structured reflection to make ideas easier to understand and act on.',
+    tags: ['React', 'Nextjs', 'API Integration', 'Responsive Design', 'Supabase'],
+    type: 'Personal',
+    url: 'https://minddumpz.vercel.app/',
+  },
+  {
+    title: 'Snout&About',
+    description:
+      'Snout & About Vet is a modern veterinary service website designed to provide pet owners with easy access to information, inquiries, and contact options. It features a clean, responsive interface that highlights services, improves user engagement, and simplifies communication between clients and the clinic.',
+    tags: ['React', 'Nextjs', 'API Integration', 'Responsive Design', 'Supabase'],
+    type: 'Professional',
+    url: 'https://snoutandaboutvet.vercel.app/',
+  },
+  {
     title: 'Casino Web Applications',
     description: 'Developed interactive casino web applications at SA Dreamtech, transforming wireframes into fully functional, responsive interfaces with engaging user interactions.',
     tags: ['React', 'JavaScript', 'CSS3', 'Animation'],
