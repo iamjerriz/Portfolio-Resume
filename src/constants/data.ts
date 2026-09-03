@@ -60,14 +60,13 @@ export const ABOUT = {
 
 export const EXPERIENCES = [
   {
-    role: 'Fullstack Developer',
-    company: 'iGen System Inc.',
-    location: 'Makati, Philippines',
+    role: 'Frontend Developer',
+    company: 'Balboa Digital',
+    location: 'Remote',
     period: 'Jul 2023 - Apr 2026',
     duration: '2 years 9 months',
     description: [
       'Maintained and enhanced core web platforms with a focus on performance and scalability.',
-      'Designed and developed RESTful APIs while managing backend databases to ensure reliable data flow and system stability.',
       'Utilised the React framework to build dynamic and interactive web applications, improving site performance.',
       'Built secure, maintainable front-end modules for online shopping platforms.',
       'Collaborated with cross-functional teams to ensure seamless integration with RESTful APIs for efficient data flow.',
@@ -76,14 +75,14 @@ export const EXPERIENCES = [
     techStack: ['React.js', 'TypeScript', 'JavaScript (ES6+)', 'Context API', 'HTML', 'CSS3', 'SASS', 'Tailwind', 'Material UI', 'REST API', 'Axios', 'Node.js', 'SQL', 'GitHub', 'Figma'],
   },
   {
-    role: 'Fullstack Developer',
-    company: 'Codabyte',
+    role: 'Frontend Developer',
+    company: 'Serino Payment Systems',
     location: 'Remote',
     period: 'Feb 2021 - Jul 2023',
     duration: '2 years 5 months',
     description: [
-      'Built and maintained robust backend services and RESTful APIs to power web operations.',
-      'Helped build full-stack solutions leveraging Next.js and PostgreSQL, alongside a responsive admin dashboard for inventory and merchandise tracking.',
+      'Developed secure, maintainable front-end modules adhering to industry best practices.',
+      'Maintained and optimized core web platforms, achieving a 30% increase in loading speed.',
       'Translated complex UI/UX designs into functional React components, significantly improving usability.',
       'Implemented responsive web design principles, ensuring cross-browser compatibility and accessibility.',
       'Participated in agile methodologies, collaborating within teams to consistently meet project milestones.',
