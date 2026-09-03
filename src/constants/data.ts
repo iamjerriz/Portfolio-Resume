@@ -4,14 +4,14 @@ export const PERSONAL = {
   name: 'Jerriz',
   lastName: 'Evangelista',
   fullName: 'Jerriz Evangelista',
-  role: 'Frontend Developer',
-  tagline: 'FRONTEND DEVELOPER',
+  role: 'Software Developer',
+  tagline: 'SOFTWARE DEVELOPER',
   logo: '<JE />',
   email: 'iamjerriz@gmail.com',
   location: 'Central Luzon, Philippines',
   jobStreetUrl: 'https://ph.jobstreet.com/profiles/jerriz-evangelista-11NS2KcNmH',
   linkedInUrl: 'https://www.linkedin.com/in/jerriz-evangelista-071069277/',
-  summary: 'Frontend Developer with 6 years of experience building responsive, scalable, and user-focused web applications. Passionate about crafting clean, performant interfaces.',
+  summary: 'Software Developer with 6 years of experience building responsive, scalable, and user-focused web applications. Passionate about crafting clean, performant interfaces.',
 };
 
 // ─── Navigation ─────────────────────────────────────────────────────────────
@@ -28,7 +28,7 @@ export const NAV_LINKS = [
 
 export const ABOUT = {
   bio: [
-    "I'm a Frontend Developer based in Central Luzon, Philippines, with 6 years of professional experience crafting modern web applications. I specialize in building responsive, scalable, and accessible user interfaces using React and modern JavaScript frameworks.",
+    "I'm a Software Developer based in Central Luzon, Philippines, with 6 years of professional experience crafting modern web applications. I specialize in building responsive, scalable, and accessible user interfaces using React and modern JavaScript frameworks.",
     "I thrive in cross-functional teams, working closely with designers and backend developers to deliver high-quality solutions. I'm passionate about clean code, performance optimization, and creating seamless user experiences.",
   ],
   highlights: [
@@ -45,7 +45,7 @@ export const ABOUT = {
     {
       icon: 'Server' as const,
       title: 'Backend',
-      desc: 'Node.js, REST APIs, MySQL, API integration',
+      desc: 'Node.js, Next.js, Supabase, REST APIs, MySQL, API integration',
     },
     {
       icon: 'GitBranch' as const,
@@ -53,46 +53,56 @@ export const ABOUT = {
       desc: 'Git, GitHub, CI/CD, Agile methodology',
     },
   ],
-  skills: ['React.js', 'Next.js', 'TypeScript', 'JavaScript', 'Node.js', 'Tailwind CSS', 'HTML5 / CSS3', 'REST APIs', 'Git', 'MySQL', 'Redux', 'Responsive Design'],
+  skills: ['React.js', 'Next.js', 'TypeScript', 'JavaScript', 'Node.js', 'Supabase', 'Tailwind CSS', 'HTML5 / CSS3', 'REST APIs', 'Git', 'MySQL', 'Redux', 'Responsive Design'],
 };
 
 // ─── Work Experience ────────────────────────────────────────────────────────
 
 export const EXPERIENCES = [
   {
-    role: 'Front End Developer',
-    company: 'Balboa Digital Center Services',
-    period: 'Jul 2023 - Present',
-    duration: '2 years 8 months',
+    role: 'Fullstack Developer',
+    company: 'iGen System Inc.',
+    location: 'Makati, Philippines',
+    period: 'Jul 2023 - Apr 2026',
+    duration: '2 years 9 months',
     description: [
-      'Maintain and enhance company websites with new features and tools for users.',
-      'Collaborate with backend developers on data structure design and API integration.',
-      'Work closely with the design team to ensure UI/UX standards and implement pixel-perfect interfaces.',
-      'Build and optimize reusable frontend components for scalability.',
+      'Maintained and enhanced core web platforms with a focus on performance and scalability.',
+      'Designed and developed RESTful APIs while managing backend databases to ensure reliable data flow and system stability.',
+      'Utilised the React framework to build dynamic and interactive web applications, improving site performance.',
+      'Built secure, maintainable front-end modules for online shopping platforms.',
+      'Collaborated with cross-functional teams to ensure seamless integration with RESTful APIs for efficient data flow.',
+      'Engaged in architecture discussions, providing insights into front-end technology and best practices.',
     ],
+    techStack: ['React.js', 'TypeScript', 'JavaScript (ES6+)', 'Context API', 'HTML', 'CSS3', 'SASS', 'Tailwind', 'Material UI', 'REST API', 'Axios', 'Node.js', 'SQL', 'GitHub', 'Figma'],
   },
   {
-    role: 'Front End Developer',
-    company: 'iGen Payment Systems Inc.',
+    role: 'Fullstack Developer',
+    company: 'Codabyte',
+    location: 'Remote',
     period: 'Feb 2021 - Jul 2023',
-    duration: '2 years 6 months',
+    duration: '2 years 5 months',
     description: [
-      'Core developer for flagship platforms including Central.ph and dygenfood.com.',
-      'Built secure, maintainable front-end modules for payment systems.',
-      'Refactored legacy codebase to modern React standards, improving code quality and maintainability.',
-      'Implemented responsive designs and ensured cross-browser compatibility.',
+      'Built and maintained robust backend services and RESTful APIs to power web operations.',
+      'Helped build full-stack solutions leveraging Next.js and PostgreSQL, alongside a responsive admin dashboard for inventory and merchandise tracking.',
+      'Translated complex UI/UX designs into functional React components, significantly improving usability.',
+      'Implemented responsive web design principles, ensuring cross-browser compatibility and accessibility.',
+      'Participated in agile methodologies, collaborating within teams to consistently meet project milestones.',
     ],
+    techStack: ['React.js', 'Next.js', 'PostgreSQL', 'Supabase', 'JavaScript (ES6+)', 'Redux', 'HTML', 'CSS3', 'SASS', 'Material UI', 'REST API', 'Axios', 'Figma'],
   },
   {
-    role: 'Web Developer / Front End ReactJS',
-    company: 'SA Dreamtech Group International Inc.',
-    period: 'Dec 2019 - Nov 2020',
-    duration: '1 year',
+    role: 'Frontend Developer',
+    company: 'SA Dream Tech / SA Gaming',
+    location: 'Makati, Philippines',
+    period: 'Dec 2019 - Oct 2020',
+    duration: '11 months',
     description: [
-      'Translated wireframes and mockups into fully functional, responsive web pages.',
-      'Maintained and updated existing company websites.',
-      'Developed interactive UI components using React.js.',
+      'Worked closely with UX and design teams to create intuitive user interfaces, enhancing overall user satisfaction.',
+      'Implemented rigorous testing and debugging processes to sustain high performance and reliability.',
+      'Supported seamless integration with backend services, improving API collaboration and data handling.',
+      'Engaged in continuous learning to adapt to modern frameworks and tools in front-end development.',
     ],
+    techStack: ['React.js', 'JavaScript (ES6+)', 'HTML', 'CSS3', 'SASS', 'REST API', 'Axios'],
   },
 ];
 
@@ -113,7 +123,7 @@ export const PROJECTS = [
     description: 'A flagship e-commerce and digital services platform. Served as core frontend developer, building secure and maintainable modules for the payment system and user-facing features.',
     tags: ['React', 'JavaScript', 'REST API', 'Payment Integration'],
     type: 'Professional',
-    url: 'http://www.central.ph/',
+    url: 'https://www.landers.ph/',
   },
   {
     title: 'Dygenfood.ph',

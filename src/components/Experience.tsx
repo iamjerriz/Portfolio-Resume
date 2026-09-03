@@ -42,6 +42,7 @@ export default function Experience() {
                       <div>
                         <h3 className='glitch-hover text-xl font-bold text-foreground' data-text={exp.role}>{exp.role}</h3>
                         <p className='text-accent'>{exp.company}</p>
+                        {exp.location && <p className='text-xs text-muted'>{exp.location}</p>}
                       </div>
                       <div className='text-right'>
                         <p className='text-sm text-muted'>{exp.period}</p>
@@ -57,6 +58,19 @@ export default function Experience() {
                         </li>
                       ))}
                     </ul>
+
+                    {exp.techStack && (
+                      <div className='mt-5 flex flex-wrap gap-2'>
+                        {exp.techStack.map((tech) => (
+                          <span
+                            key={tech}
+                            className='rounded-full border border-card-border px-3 py-1 font-mono text-xs text-muted'
+                          >
+                            {tech}
+                          </span>
+                        ))}
+                      </div>
+                    )}
                   </div>
                 </div>
               </ScrollReveal>
