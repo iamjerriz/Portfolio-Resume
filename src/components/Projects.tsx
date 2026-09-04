@@ -7,7 +7,6 @@ import ScrollReveal from '@/components/ScrollReveal';
 import StaggerReveal, { staggerItem } from '@/components/StaggerReveal';
 
 export default function Projects() {
-  console.log('test');
   return (
     <section id='projects' className='px-6 py-24'>
       <div className='mx-auto max-w-6xl'>
